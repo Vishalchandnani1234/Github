@@ -41,9 +41,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Salesforce CLI
         run: |
-          npm install sfdx-cli
-          node_modules/sfdx-cli/bin/run --version
-          node_modules/sfdx-cli/bin/run plugins --core
+          npm install sfdx-cli --global
+          npm install @salesforce/cli --global
 
       - name: 'Populate auth file with SFDX_URL secret'
         shell: bash
