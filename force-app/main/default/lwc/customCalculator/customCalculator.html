@@ -1,0 +1,70 @@
+<template>
+    <lightning-card title="Event Example Testing 345678">
+		<div class="slds-m-top_small slds-m-bottom_medium">
+			<lightning-button variant="Brand" label="Base" class="slds-m-left_x-small cssClass"></lightning-button>
+		</div>
+        <div class="slds-p-around_medium lgc-bg">
+            <!-- <lightning-input type="text" value={name} label="Enter some text" onkeyup={changeHandler}></lightning-input> -->
+            <lightning-input type="number"  name="first_number" label="Enter First Number" onchange={getValues} placeholder="Enter First Number"></lightning-input>
+            <lightning-input type="number"  name="second_number" label="Enter Second Number" onchange={getValues} placeholder="Enter Second Number"></lightning-input>
+            <div class="slds-p-top_small">
+                <div class="slds-p-left_medium">
+                <lightning-button variant="success" label="+" name="action" onclick={doAction} class="slds-p-left_medium" disabled={isShow}></lightning-button>
+                <lightning-button variant="Destructive" label="-" name="action"  onclick={doAction} class="slds-p-left_medium" disabled={isShow}></lightning-button>
+                <lightning-button variant="brand" label="*" name="action" onclick={doAction} class="slds-p-left_medium" disabled={isShow}></lightning-button>
+                <lightning-button variant="brand" label="/" name="action" onclick={doAction} class="slds-p-left_medium" disabled={isShow}></lightning-button>
+                <lightning-button variant="Neutral" label="%" name="action" onclick={doAction} class="slds-p-left_medium" disabled={isShow}></lightning-button>
+                </div>
+            </div>
+        </div> 
+        <div class="slds-p-around_medium lgc-bg">
+            <div class={text_color}>
+                <div class="slds-box slds-theme_shade">
+                    <b>
+                        Result is=>{result}
+                    </b>
+                </div>
+            </div>
+        </div> 
+        <!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+<!-- <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8"> -->
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+<input type=hidden name="oid" value="00D5g000004QHYH">
+<input type=hidden name="retURL" value="http://">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="himanshujangid200@gmail.com">                                    -->
+<!--  ----------------------------------------------------------------------  -->
+
+<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+
+<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+
+<label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
+
+<label for="state">State/Province</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br>
+
+<input type="submit" name="submit">
+
+</form>      
+    </lightning-card>
+</template>
