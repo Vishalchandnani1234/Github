@@ -7,9 +7,9 @@ public class TestFactory {
        }
        return account;
    }
-   public static Contact getContact(Id accountId, String firstName1, String lastName, Boolean doInsert){
+   public static Contact getContact(Id accountId, String firstName3, String lastName, Boolean doInsert){
        Contact contact = new Contact(
-           FirstName = firstName1,
+           FirstName = firstName3,
            LastName = lastName,
            AccountId = accountId
        );
